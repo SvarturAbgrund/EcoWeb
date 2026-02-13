@@ -1,0 +1,46 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# Archivos de configuración sensible
+backend/conexion.php.local
+config/database.local.php
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+
+# Node modules (si se usa NPM)
+node_modules/
+package-lock.json
+
+# Dependencias de PHP (si se usa Composer)
+vendor/
+composer.lock
+
+# Base de datos local
+*.sql
+database/
+
+# Cache
+.cache/
+cache/
+
+# Archivos de compilación
+dist/
+build/
