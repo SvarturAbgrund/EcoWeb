@@ -5,7 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Comentarios - EcoWeb</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../public/css/estilos.css">
+
+
 </head>
 <body>
 
@@ -14,9 +16,13 @@
 </header>
 
 <nav>
-    <a href="index.html">Inicio</a>
-    <a href="ecosistemas.html">Ecosistemas</a>
-    <a href="contactos.html">Contactos</a>
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="../pages/ecosistemas.html">Ecosistemas</a>
+    <a href="../pages/contactos.html">Contactos</a>
+</nav>
+
+
 </nav>
 
 <section>
