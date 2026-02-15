@@ -1,3 +1,5 @@
+/* ====== ESTILO GENERAL ====== */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,26 +10,28 @@ body {
     background-attachment: fixed;
 }
 
-header {
+/* ====== HEADER / NAV / FOOTER ====== */
+
+header, nav, footer {
     background-color: #77e3bac7;
-    color: black;
-    padding: 20px;
     text-align: center;
+    padding: 15px;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav {
     position: sticky;
     top: 0;
-    background-color: #77e3bac7;
-    padding: 10px;
-    text-align: center;
     z-index: 1000;
 }
 
 nav a {
-    color: black;
     margin: 10px;
     text-decoration: none;
+    color: black;
     font-weight: bold;
 }
 
@@ -35,16 +39,243 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* ====== CONTENIDO GENERAL ====== */
+
 section {
-    background-color: rgba(255, 255, 255, 0.85);
+    background: rgba(255,255,255,0.9);
     padding: 20px;
-    margin: 20px;
+    margin: 30px auto;
+    width: 80%;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-footer {
-    background-color: #77e3babc;
-    color: black;
+/* ====== INFO USUARIO (ESQUINA) ====== */
+
+.usuario-info {
+    position: fixed;
+    top: 10px;
+    right: 15px;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ====== FORMULARIOS GENERALES ====== */
+
+form textarea,
+form input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    resize: none;
+}
+
+form button {
+    padding: 8px 15px;
+    background-color: #77e3ba;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #5bc9a0;
+}
+
+/* ====== LOGIN (CENTRADO Y ESPECIAL) ====== */
+
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.form-container h2,
+.form-container h3 {
     text-align: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Separadores */
+hr {
+    margin: 20px 0;
+}
+/* ===== CONTENEDOR LOGIN ===== */
+
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ===== BOTONES SUPERIORES ===== */
+
+.botones-opciones {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.botones-opciones button {
+    flex: 1;
+    margin: 5px;
+    padding: 8px;
+    background-color: #77e3ba;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botones-opciones button:hover {
+    background-color: #5bc9a0;
+}
+
+/* ===== FORMULARIOS OCULTOS ===== */
+
+.formulario {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario.activo {
+    display: flex;
+}
+
+/* ===== CONTENEDOR LOGIN ===== */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Formularios ocultos */
+.formulario {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario.activo {
+    display: flex;
+}
+
+/* Inputs */
+.formulario input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botones */
+.formulario button {
+    padding: 8px;
+    background-color: #77e3ba;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    background-color: #5bc9a0;
+}
+
+/* Links internos */
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.links button {
+    background: none;
+    color: blue;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.comentario {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.respuesta {
+    background: #e8fdf4;
     padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+/* FORMULARIOS LOGIN */
+.formulario {
+    display: none !important;
+}
+
+.formulario.activo {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.links button {
+    background: none;
+    color: blue;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.comentario {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.respuesta {
+    background: #e8fdf4;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
 }
