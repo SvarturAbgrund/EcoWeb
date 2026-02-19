@@ -1,5 +1,13 @@
 <?php
+// Inicializar seguridad ANTES del header
+require_once "../data/seguridad.php";
+require_once "../data/conexion.php";
 require_once "../data/usuarios_model.php";
+
+// Iniciar sesión segura
+iniciarSesionSegura();
+
+// Incluir header
 include "layout/header.php";
 
 if (isset($_POST['registro'])) {

@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 -- Base de datos: `ecoweb`
 --
 
+CREATE DATABASE IF NOT EXISTS `ecoweb`;
+USE `ecoweb`;
+
 -- --------------------------------------------------------
 
 --
@@ -42,13 +45,10 @@ CREATE TABLE `comentarios` (
 --
 
 INSERT INTO `comentarios` (`id`, `usuario_id`, `nombre`, `correo`, `comentario`, `fecha`, `respuesta`) VALUES
-(2, 0, 'Brayan Escalante', 'brayan@gmail.com', 'hola mundo', '2026-02-10 01:48:52', NULL),
-(3, 0, ' christian refugio ', 'christian@gmail.com', '.........................................................................', '2026-02-13 01:49:57', NULL),
-(4, 0, ' christian refugio ', 'brayan@gmail.com', 'mmmmm', '2026-02-13 03:01:01', NULL),
-(5, 0, 'Hector del Toro', 'torito@gmail.com', 'muuuuuuuuuuuu\r\n', '2026-02-13 03:23:09', NULL),
-(6, 0, 'Hector del Toro', 'torito@gmail.com', 'muuuuuuuuuuuu\r\n', '2026-02-13 03:25:31', NULL),
-(9, 4, NULL, NULL, 'hola a todos', '2026-02-15 02:54:55', 'hola'),
-(10, 2, NULL, NULL, 'hola a todos', '2026-02-15 02:57:04', NULL);
+(1, 3, 'Juan Usuarios', 'juan@ecoweb.com', 'Excelente página sobre ecosistemas, muy informativa', '2026-02-15 08:30:00', 'Gracias Juan, nos alegra te haya sido útil'),
+(2, 4, 'Maria Test', 'maria@ecoweb.com', 'Me encanta el enfoque educativo del proyecto', '2026-02-15 09:15:00', NULL),
+(3, 5, 'Carlos Demo', 'carlos@ecoweb.com', 'Muy bueno el contenido sobre conservación ambiental', '2026-02-15 10:45:00', 'Gracias por tu feedback Carlos'),
+(4, 6, 'Sofia Prueba', 'sofia@ecoweb.com', 'El diseño es muy limpio y fácil de navegar', '2026-02-15 11:20:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -70,9 +70,12 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `password`, `rol`, `token_recuperacion`) VALUES
-(2, 'Administrador', 'admin@eco.com', '$2y$10$7MWD4K3OKpGHgg29Wn5Lv.g869T0YtoR5zgJxViSX41kbT7bcJpIu', 'admin', NULL),
-(3, 'Hector del Toro', 'torito@gmail.com', '$2y$10$DdcQysYB8/qIlAZOwU6F/u/Ktuzo6WfnP83hBdSQEEpNHe8zgE7mi', 'usuario', NULL),
-(4, 'lucero martinez', 'luz@gmail.com', '$2y$10$PLdkKTX9lD2IevSFqrEzAuzh9YE89ZT4r1rWS9V4.o6ndgtaO3Cau', 'usuario', NULL);
+(1, 'Administrador Principal', 'admin@ecoweb.com', '$2y$10$K1L9m8N6O5P4Q3R2S1T0UvWxYzA9bC8dE7fG6hI5jK4lM3nO2pQ1', 'admin', NULL),
+(2, 'Admin Secundario', 'admin2@ecoweb.com', '$2y$10$A2B3C4D5E6F7G8H9I0J1K2L3M4N5O6P7Q8R9S0T1U2V3W4X5Y6Z7', 'admin', NULL),
+(3, 'Juan Usuarios', 'juan@ecoweb.com', '$2y$10$Z8Y7X6W5V4U3T2S1R0Q9P8O7N6M5L4K3J2I1H0G9F8E7D6C5B4A3', 'usuario', NULL),
+(4, 'Maria Test', 'maria@ecoweb.com', '$2y$10$A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0U1V2W3X4Y5Z6', 'usuario', NULL),
+(5, 'Carlos Demo', 'carlos@ecoweb.com', '$2y$10$L9K8J7I6H5G4F3E2D1C0B9A8Z7Y6X5W4V3U2T1S0R9Q8P7O6N5M4', 'usuario', NULL),
+(6, 'Sofia Prueba', 'sofia@ecoweb.com', '$2y$10$M1N2O3P4Q5R6S7T8U9V0W1X2Y3Z4A5B6C7D8E9F0G1H2I3J4K5L6', 'usuario', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -99,13 +102,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

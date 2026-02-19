@@ -1,95 +1,122 @@
 <?php
-include "layout/header.php";
+// Incluir seguridad Y conexión ANTES del header
+require_once "../data/seguridad.php";
 require_once "../data/conexion.php";
+require_once "../data/usuarios_model.php";
+
+// Iniciar sesión AQUÍ, antes de cualquier output
+iniciarSesionSegura();
+
+// AHORA incluir el header
+include "layout/header.php";
 
 $mensaje = "";
 
 /* ================= LOGIN ================= */
 if(isset($_POST['login'])){
-    $correo = $_POST['correo'];
-    $password = $_POST['password'];
+    // Validar token CSRF
+    if (!isset($_POST['csrf_token']) || !validarTokenCSRF($_POST['csrf_token'])) {
+        $mensaje = "Token de seguridad inválido. Intenta de nuevo.";
+    } else {
+        $correo = sanitizarEntrada($_POST['correo']);
+        $password = $_POST['password'];
 
-    $sql = "SELECT * FROM usuarios WHERE correo = ?";
-    $stmt = $conexion->prepare($sql);
+        $usuario = loginUsuario($correo, $password);
 
-    if(!$stmt){
-        die("Error SQL: " . $conexion->error);
-    }
-
-    $stmt->bind_param("s",$correo);
-    $stmt->execute();
-    $resultado = $stmt->get_result();
-
-    if($resultado->num_rows > 0){
-        $usuario = $resultado->fetch_assoc();
-
-        if(password_verify($password, $usuario['password'])){
+        if($usuario){
             $_SESSION['id'] = $usuario['id'];
-            $_SESSION['nombre'] = $usuario['nombre'];
+            $_SESSION['nombre'] = escaparHTML($usuario['nombre']);
             $_SESSION['rol'] = $usuario['rol'];
 
             header("Location: index.php");
             exit();
         } else {
-            $mensaje = "Contraseña incorrecta";
+            $mensaje = "Credenciales incorrectas o demasiados intentos. Intenta después.";
         }
-    } else {
-        $mensaje = "Usuario no encontrado";
     }
 }
 
 /* ================= REGISTRO ================= */
 if(isset($_POST['registro'])){
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    $sql = "INSERT INTO usuarios(nombre,correo,password,rol) VALUES(?,?,?, 'usuario')";
-    $stmt = $conexion->prepare($sql);
-
-    if(!$stmt){
-        die("Error SQL: " . $conexion->error);
-    }
-
-    $stmt->bind_param("sss",$nombre,$correo,$password);
-
-    if($stmt->execute()){
-        $mensaje = "Registro exitoso.";
+    // Validar token CSRF
+    if (!isset($_POST['csrf_token']) || !validarTokenCSRF($_POST['csrf_token'])) {
+        $mensaje = "Token de seguridad inválido. Intenta de nuevo.";
     } else {
-        $mensaje = "Error al registrarse.";
+        $nombre = sanitizarEntrada($_POST['nombre']);
+        $correo = sanitizarEntrada($_POST['correo']);
+        $password = $_POST['password'];
+        $confirmar_password = $_POST['confirmar_password'] ?? '';
+
+        // Validar que las contraseñas coincidan
+        if ($password !== $confirmar_password) {
+            $mensaje = "Las contraseñas no coinciden";
+        } else {
+            $resultado = registrarUsuario($nombre, $correo, $password);
+            if ($resultado['exito']) {
+                $mensaje = "Registro exitoso. Por favor, inicia sesión.";
+            } else {
+                $mensaje = $resultado['error'];
+            }
+        }
     }
 }
 
 /* ================= RECUPERAR ================= */
 if(isset($_POST['recuperar'])){
-    $correo = $_POST['correo'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-    $sql = "UPDATE usuarios SET password = ? WHERE correo = ?";
-    $stmt = $conexion->prepare($sql);
-
-    if(!$stmt){
-        die("Error SQL: " . $conexion->error);
-    }
-
-    $stmt->bind_param("ss",$password,$correo);
-
-    if($stmt->execute()){
-        $mensaje = "Contraseña actualizada.";
+    // Validar token CSRF
+    if (!isset($_POST['csrf_token']) || !validarTokenCSRF($_POST['csrf_token'])) {
+        $mensaje = "Token de seguridad inválido. Intenta de nuevo.";
     } else {
-        $mensaje = "Correo no encontrado.";
+        $correo = sanitizarEntrada($_POST['correo']);
+        $password = $_POST['password'];
+        $confirmar_password = $_POST['confirmar_password'] ?? '';
+
+        // Validar que las contraseñas coincidan
+        if ($password !== $confirmar_password) {
+            $mensaje = "Las contraseñas no coinciden";
+        } else {
+            // Validar email
+            if (!validarEmail($correo)) {
+                $mensaje = "Email inválido";
+            } else {
+                // Validar contraseña
+                $validacion = validarPassword($password);
+                if ($validacion !== true) {
+                    $mensaje = $validacion;
+                } else {
+                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+                    $sql = "UPDATE usuarios SET password = ? WHERE correo = ?";
+                    $stmt = conexion->prepare($sql);
+                    
+                    if ($stmt) {
+                        $stmt->bind_param("ss", $passwordHash, $correo);
+                        if ($stmt->execute() && $stmt->affected_rows > 0) {
+                            $mensaje = "Contraseña actualizada. Por favor, inicia sesión.";
+                        } else {
+                            $mensaje = "Correo no encontrado.";
+                        }
+                    } else {
+                        $mensaje = "Error en la base de datos";
+                    }
+                }
+            }
+        }
     }
 }
+
+// Generar token CSRF para formularios
+$token_csrf = generarTokenCSRF();
 ?>
 
 <section class="form-container">
 
 <h2>Acceso EcoWeb</h2>
 
-<?php if($mensaje != "") echo "<p style='color:red;'>$mensaje</p>"; ?>
+<?php if($mensaje != "") echo "<p style='color:red; padding: 10px; background: #ffe6e6; border-radius: 5px;'>" . escaparHTML($mensaje) . "</p>"; ?>
 
 <!-- LOGIN (VISIBLE) -->
 <form method="POST" id="loginForm" class="formulario activo">
+    <input type="hidden" name="csrf_token" value="<?php echo escaparHTML($token_csrf); ?>">
     <input type="email" name="correo" placeholder="Correo" required>
     <input type="password" name="password" placeholder="Contraseña" required>
     <button type="submit" name="login">Ingresar</button>
@@ -103,9 +130,11 @@ if(isset($_POST['recuperar'])){
 <!-- REGISTRO (OCULTO) -->
 <form method="POST" id="registroForm" class="formulario">
     <h3>Registrarse</h3>
-    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="hidden" name="csrf_token" value="<?php echo escaparHTML($token_csrf); ?>">
+    <input type="text" name="nombre" placeholder="Nombre (mín. 3 caracteres)" required>
     <input type="email" name="correo" placeholder="Correo" required>
-    <input type="password" name="password" placeholder="Contraseña" required>
+    <input type="password" name="password" placeholder="Contraseña (mín. 6 caracteres, con mayúscula y número)" required>
+    <input type="password" name="confirmar_password" placeholder="Confirmar contraseña" required>
     <button type="submit" name="registro">Crear cuenta</button>
     <button type="button" onclick="mostrar('loginForm')">Volver</button>
 </form>
@@ -113,8 +142,10 @@ if(isset($_POST['recuperar'])){
 <!-- RECUPERAR (OCULTO) -->
 <form method="POST" id="recuperarForm" class="formulario">
     <h3>Recuperar Contraseña</h3>
+    <input type="hidden" name="csrf_token" value="<?php echo escaparHTML($token_csrf); ?>">
     <input type="email" name="correo" placeholder="Correo" required>
     <input type="password" name="password" placeholder="Nueva contraseña" required>
+    <input type="password" name="confirmar_password" placeholder="Confirmar contraseña" required>
     <button type="submit" name="recuperar">Actualizar</button>
     <button type="button" onclick="mostrar('loginForm')">Volver</button>
 </form>
