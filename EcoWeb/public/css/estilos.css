@@ -459,3 +459,72 @@ section a:hover {
         font-size: 1.1em;
     }
 }
+
+/* Ecosistemas */
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2e7d32; /* Verde naturaleza */
+    border-radius: 30px;       /* Bordes redondeados */
+    border: 2px solid transparent;
+    transition: all 0.3s ease; /* Animación suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto al pasar el mouse */
+.btn:hover {
+    background-color: #ffffff;
+    color: #2e7d32;
+    border-color: #2e7d32;
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para que se vean uno debajo del otro (opcional) */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.eco-card {
+    background-color: #7ba273; /* El verde oliva de tu imagen */
+    display: flex;             /* Pone imagen y lista lado a lado */
+    align-items: flex-start;   /* Alinea el contenido al tope */
+    padding: 20px;
+    gap: 20px;                 /* Espacio entre imagen y texto */
+    margin-bottom: 20px;
+    color: #000;               /* Color de letra negro */
+}
+
+.ecoImg {
+    width: 250px;              /* Ajusta el tamaño según prefieras */
+    height: auto;
+    object-fit: cover;
+}
+
+.eco-list {
+    list-style-type: disc;     /* Mantiene los puntos de la lista */
+    margin: 0;
+    padding-left: 20px;
+}
+
+.eco-list li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+/* Opcional: Hacer negritas los títulos internos como en tu ejemplo */
+.eco-list li strong {
+    font-weight: bold;
+}
