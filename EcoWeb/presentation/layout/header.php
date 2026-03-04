@@ -1,4 +1,7 @@
 <?php
+// Incluir funciones de seguridad
+require_once '../data/seguridad.php';
+
 // NO iniciar sesión aquí - debe hacerse en la página principal ANTES del header
 // Si alguien incluye directamente, al menos verifica si existe
 if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
