@@ -1,4 +1,4 @@
-<?php
+ <?php
 // Incluir seguridad Y conexión ANTES del header
 require_once "../data/seguridad.php";
 require_once "../data/conexion.php";
