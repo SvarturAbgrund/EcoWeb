@@ -14,7 +14,12 @@ la vida que puede sostener.
 
     <h3>Bosque</h3>
 
-      <img src="../public/img/bosque.png" class="ecoImg">
+<video autoplay muted loop id="videoBosque">
+<source src="../public/video/bosque.mp4" type="video/mp4">
+</video>
+
+
+    </video>
 
     <ul class="eco-list">
         <li>Áreas con abundante vegetación</li>
@@ -24,8 +29,10 @@ la vida que puede sostener.
     </ul>
 
     <h3 >Selva</h3>
-      
-    <img src="../public/img/selva.png" class="ecoImg">
+      <video autoplay muted loop id="videoBosque">
+<source src="../public/video/Selva.mp4" type="video/mp4">
+</video>
+  
         <ul class="eco-list">
 
       <li><strong>Descripción:</strong> Bosques densos y húmedos, principalmente tropicales</li>
@@ -39,7 +46,9 @@ tucanes, monos</li>
 
 <h3>Desierto</h3>
       
-    <img src="../public/img/Desierto.png" class="ecoImg">
+   <video autoplay muted loop id="videoBosque">
+<source src="../public/video/desierto.mp4" type="video/mp4">
+</video>
        
     <ul class="eco-list">
 
@@ -52,7 +61,9 @@ tucanes, monos</li>
 
 <h3>Montaña</h3>
       
-    <img src="../public/img/montaña.png" class="ecoImg">
+    <video autoplay muted loop id="videoBosque">
+<source src="../public/video/montaña.mp4" type="video/mp4">
+</video>
       
 
     <ul class="eco-list">

@@ -469,3 +469,52 @@ text-align:center;
 .grafica-box canvas{
 max-width:100%;
 }
+
+/* video */
+#videoBosque{
+width:60%;
+max-width:700px;
+border-radius:12px;
+margin-bottom:30px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+.ecosistemas-box{
+    text-align:center;
+}
+
+ .ecosistemas-box .btn-container{
+    display:flex;
+    flex-direction:column;   /* uno debajo de otro */
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+.btn{
+    width:220px;            /* mismo tamaño que la imagen */
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+
+.volver{
+    display:inline-block;
+    padding:10px 20px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:25px;
+    font-size:15px;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.volver:hover{
+    background:#1b5e20;
+    transform:translateX(-5px);
+}
