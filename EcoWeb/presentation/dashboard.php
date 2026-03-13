@@ -242,7 +242,9 @@ Hacer Admin
 
 <?php } ?>
 
-<a class="boton boton-rojo" href="../data/eliminar_usuario.php?id=<?php echo $usuario['id']; ?>">
+<a class="boton boton-rojo"
+href="../data/eliminar_usuario.php?id=<?php echo $usuario['id']; ?>"
+onclick="return confirmarEliminacion('<?php echo $usuario['nombre']; ?>')">
 Eliminar
 </a>
 
@@ -341,9 +343,7 @@ size:14
      SCRIPT 2: BUSCADOR DE USUARIOS
      Filtra usuarios en tiempo real dentro de la tabla
 ===================================================== -->
-
 <script>
-
 function buscarUsuarios(){
 
 // Obtener texto del buscador
@@ -374,7 +374,17 @@ filas[i].style.display = "none";
 
 </script>
 
+/* =====================================================
+   CONFIRMAR ELIMINACIÓN DE USUARIO
+===================================================== */
+<script>
+function confirmarEliminacion(nombre){
 
+return confirm("⚠ ¿Seguro que deseas eliminar al usuario: " + nombre + " ?");
+
+}
+
+</script>
 
 </body>
 </html>
