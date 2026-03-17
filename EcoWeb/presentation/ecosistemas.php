@@ -19,5 +19,9 @@ include "layout/header.php";
     <a class="btn" href="Animales terrestres Extincion.php">Animales en peligro de Extincion en el Ecosistemas terrestres</a>
     <a class="btn" href="Animales marino Extincion.php"> Animales en peligro de Extincion en el Ecosistemas Marinos</a>
     <a class="btn" href="Animales polares y articos.php">Animales en peligro de Extincion en el Ecosistemas Polares Y Articos</a>
-    <a class="btn" href="DatosCuriosos.php">Datos Curiosos</a>
+      <a class="btn" href="Contaminacion del Agua y los Suelos.php">Contaminacion del Agua y los Suelos</a>
+       <a class="btn" href="Problemas y Amenazas Globales.php">Problemas y Amenazas Globales</a>
+
+          <a class="btn" href="DatosCuriosos.php">Datos Curiosos</a>
+ 
 </section>

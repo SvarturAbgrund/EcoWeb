@@ -10,6 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <link rel="stylesheet" href="../public/css/estilos.css">
 
+
 <header class="header-flotante">
     <div class="contenedor-header">
         <h1 class="titulo-flotante">🌍 EcoWeb</h1>
