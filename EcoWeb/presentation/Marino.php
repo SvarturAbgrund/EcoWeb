@@ -16,9 +16,14 @@ el clima, producen oxígeno y albergan una enorme biodiversidad</p>
 
     <h3>Oceanos</h3>
 
-     <video autoplay muted loop id="videoBosque">
-<source src="../public/video/oceanos.mp4" type="video/mp4">
-</video>
+     <div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/oceanos.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://sigmaearth.com/es/tipos-y-caracter%C3%ADsticas-de-los-ecosistemas-marinos/" class="btn-vermas">Ver más</a>
+    </div>
 
     <ul class="eco-list">
         <li><strong>Descripción:</strong> Grandes masas de agua salada que cubren más del 70% del
@@ -32,9 +37,14 @@ marinas</li>
 
     <h3>Mares</h3>
 
-     <video autoplay muted loop id="videoBosque">
-<source src="../public/video/Mares.mp4" type="video/mp4">
-</video>
+    <div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Mares.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://estudyando.com/ecosistemas-marinos-oceanos-mares-y-estuarios/" class="btn-vermas">Ver más</a>
+    </div>
   
 
     <ul class="eco-list">
@@ -45,9 +55,14 @@ marinas</li>
 
     <h3>Arrecifes de Coral</h3>
 
-   <video autoplay muted loop id="videoBosque">
-<source src="../public/video/Arrecifes de Coral.mp4" type="video/mp4">
-</video>
+    <div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Arrecifes de Coral.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://www.biodiversidad.gob.mx/ecosistemas/arrecifes.html" class="btn-vermas">Ver más</a>
+    </div>
 
     <ul class="eco-list">
             <li><strong>Descripción:</strong> Estructuras submarinas formadas por corales y algas calcáreas.</li>

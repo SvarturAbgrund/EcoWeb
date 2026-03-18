@@ -16,6 +16,8 @@ body{
 }
 
 
+
+
 /* =====================================================
    HEADER (TÍTULO PRINCIPAL DEL SITIO)
 ===================================================== */
@@ -112,6 +114,35 @@ body{
 
 .texto-nav{
     font-size:0.85em;
+}
+
+.contenedor-video {
+    text-align: center;
+}
+
+#videoBosque {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+/* BOTÓN CENTRADO ABAJO */
+.btn-vermas {
+    display: block;
+    margin: 20px auto; /* lo centra automáticamente */
+    width: fit-content;
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-vermas:hover {
+    background-color: #1b5e20;
 }
 
 

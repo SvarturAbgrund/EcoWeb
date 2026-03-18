@@ -14,9 +14,15 @@ la vida que puede sostener.
 
     <h3>Bosque</h3>
 
-<video autoplay muted loop id="videoBosque">
-<source src="../public/video/bosque.mp4" type="video/mp4">
-</video>
+<div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/bosque.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://vidaecologica.info/ecosistema-de-bosque-tipos-flora-y-fauna/#google_vignette" class="btn-vermas">Ver más</a>
+    </div>
+
 
 
     </video>
@@ -28,10 +34,17 @@ la vida que puede sostener.
         <li>Hogar de miles de especies</li>
     </ul>
 
+     
+
     <h3 >Selva</h3>
-      <video autoplay muted loop id="videoBosque">
-<source src="../public/video/Selva.mp4" type="video/mp4">
-</video>
+     <div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Selva.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://concepto.de/selva/" class="btn-vermas">Ver más</a>
+    </div>
   
         <ul class="eco-list">
 
@@ -46,10 +59,14 @@ tucanes, monos</li>
 
 <h3>Desierto</h3>
       
-   <video autoplay muted loop id="videoBosque">
-<source src="../public/video/desierto.mp4" type="video/mp4">
-</video>
-       
+   <div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Desierto.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://www.lifeder.com/ecosistema-desierto/" class="btn-vermas">Ver más</a>
+    </div>
     <ul class="eco-list">
 
     <li><strong>Descripción:</strong> Bosques densos y húmedos, principalmente tropicales.</li>
@@ -61,9 +78,14 @@ tucanes, monos</li>
 
 <h3>Montaña</h3>
       
-    <video autoplay muted loop id="videoBosque">
-<source src="../public/video/montaña.mp4" type="video/mp4">
-</video>
+      <div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Montaña.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://ecologiaverde.elperiodico.com/ecosistema-montanoso-caracteristicas-flora-y-fauna-2910.html" class="btn-vermas">Ver más</a>
+    </div>
       
 
     <ul class="eco-list">
