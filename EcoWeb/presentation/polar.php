@@ -34,7 +34,7 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
 
 <div class="contenedor-video">
         <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Antartida.mp4" type="video/mp4">
+            <source src="../public/video/antartida.mp4" type="video/mp4">
         </video>
 
         <!-- BOTÓN -->
