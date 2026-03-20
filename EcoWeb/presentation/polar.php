@@ -9,7 +9,14 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
 
 <h3>Artico</h3>
 
-<img src="../public/img/artico.png" class="ecoImg">
+<div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Artico.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://www.antarcticacruises.com/es/guia/red-trofica-y-ecosistema-del-artico" class="btn-vermas">Ver más</a>
+    </div>
 
     <ul>
     
@@ -25,7 +32,14 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
 
     <h3>Antártida</h3>
 
-<img src="../public/img/Antartida.png" class="ecoImg">
+<div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Antartida.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://concepto.de/antartida/" class="btn-vermas">Ver más</a>
+    </div>
 
 <ul>
     
@@ -41,7 +55,14 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
 
 
 <h3> Tundra</h3>
-<img src="../public/img/tundra.png" class="ecoImg">
+<div class="contenedor-video">
+        <video autoplay muted loop id="videoBosque">
+            <source src="../public/video/Tundra.mp4" type="video/mp4">
+        </video>
+
+        <!-- BOTÓN -->
+        <a href="https://ecologiaverde.elperiodico.com/tundra-caracteristicas-clima-tipos-flora-y-fauna-5566.html" class="btn-vermas">Ver más</a>
+    </div>
 
 <ul>
     
