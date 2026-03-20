@@ -33,7 +33,7 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
     <h3>Antártida</h3>
 
             <div class="gif-card">
-  <img src="../public/img/Antartida.gif" alt="Antártida">
+  <img src="../public/img/antartida.gif" alt="Antártida">
 </div>
 
 
