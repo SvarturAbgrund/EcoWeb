@@ -61,7 +61,7 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
         </video>
 
         <!-- BOTÓN -->
-        <a href="https://ecologiaverde.elperiodico.com/tundra-caracteristicas-clima-tipos-flora-y-fauna-5566.html" class="btn-vermas">Ver más</a>
+        <a href="https://ecologiaverde.elperiodico.com/tundra-caracteristicas-clima-tipos-flora-y-fauna-5566.htmlÑ" class="btn-vermas">Ver más</a>
     </div>
 
 <ul>
