@@ -32,10 +32,11 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
 
     <h3>Antártida</h3>
 
-<div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/antartida.mp4" type="video/mp4">
-        </video>
+            <div class="gif-card">
+  <img src="../public/img/Antartida.gif" alt="Antártida">
+</div>
+
+
 
         <!-- BOTÓN -->
         <a href="https://concepto.de/antartida/" class="btn-vermas">Ver más</a>
