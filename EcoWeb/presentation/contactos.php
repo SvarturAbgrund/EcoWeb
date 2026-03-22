@@ -113,8 +113,6 @@ $token_csrf = generarTokenCSRF();
 
     <div style="margin-top: 30px; padding: 20px; background: #f0f0f0; border-radius: 5px;">
         <h3>Información de Contacto</h3>
-        <p><strong>Email principal:</strong> contacto@ecoweb.com</p>
-        <p><strong>Teléfono:</strong> +XX-XXX-XXX-XXXX</p>
         <p><strong>Dirección:</strong> Calle Principal 123, Ciudad</p>
     </div>
 </section>
