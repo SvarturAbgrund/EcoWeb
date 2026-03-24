@@ -15,7 +15,7 @@ la vida que puede sostener.
     <h3>Bosque</h3>
 
        <div class="contenedor-video">
-    <img src="../public/gif/Bosque.gif" alt="Selva" class="videoBosque">
+    <img src="../public/gif/bosque.gif" alt="Selva" class="videoBosque">
 </div>
 
         <!-- BOTÓN -->
@@ -76,7 +76,7 @@ tucanes, monos</li>
 
 <h3>Montaña</h3>
       <div class="contenedor-video">
-    <img src="../public/gif/montana.gif" alt="Selva" class="videoBosque">
+    <img src="../public/gif/montaña.gif" alt="Selva" class="videoBosque">
 </div>
 
         <!-- BOTÓN -->
