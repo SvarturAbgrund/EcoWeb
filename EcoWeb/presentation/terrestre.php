@@ -14,10 +14,9 @@ la vida que puede sostener.
 
     <h3>Bosque</h3>
 
-<div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/bosque.mp4" type="video/mp4">
-        </video>
+       <div class="contenedor-video">
+    <img src="../public/gif/Bosque.gif" alt="Selva" class="videoBosque">
+</div>
 
         <!-- BOTÓN -->
         <a href="https://vidaecologica.info/ecosistema-de-bosque-tipos-flora-y-fauna/#google_vignette" class="btn-vermas">Ver más</a>
@@ -37,10 +36,10 @@ la vida que puede sostener.
      
 
     <h3 >Selva</h3>
-     <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Selva.mp4" type="video/mp4">
-        </video>
+
+<div class="contenedor-video">
+    <img src="../public/gif/selva.gif" alt="Selva" class="videoBosque">
+</div>
 
         <!-- BOTÓN -->
         <a href="https://concepto.de/selva/" class="btn-vermas">Ver más</a>
@@ -60,9 +59,8 @@ tucanes, monos</li>
 <h3>Desierto</h3>
       
    <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Desierto.mp4" type="video/mp4">
-        </video>
+    <img src="../public/gif/desierto.gif" alt="Selva" class="videoBosque">
+</div>
 
         <!-- BOTÓN -->
         <a href="https://www.lifeder.com/ecosistema-desierto/" class="btn-vermas">Ver más</a>
@@ -77,11 +75,9 @@ tucanes, monos</li>
 </ul>
 
 <h3>Montaña</h3>
-      
       <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Montaña.mp4" type="video/mp4">
-        </video>
+    <img src="../public/gif/montana.gif" alt="Selva" class="videoBosque">
+</div>
 
         <!-- BOTÓN -->
         <a href="https://ecologiaverde.elperiodico.com/ecosistema-montanoso-caracteristicas-flora-y-fauna-2910.html" class="btn-vermas">Ver más</a>

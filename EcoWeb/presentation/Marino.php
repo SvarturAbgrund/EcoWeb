@@ -15,12 +15,9 @@ el clima, producen oxígeno y albergan una enorme biodiversidad</p>
     </ul>
 
     <h3>Oceanos</h3>
-
-     <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/oceanos.mp4" type="video/mp4">
-        </video>
-
+<div class="contenedor-video">
+    <img src="../public/gif/Oceano.gif" alt="Selva" class="videoBosque">
+</div>
         <!-- BOTÓN -->
         <a href="https://sigmaearth.com/es/tipos-y-caracter%C3%ADsticas-de-los-ecosistemas-marinos/" class="btn-vermas">Ver más</a>
     </div>
@@ -37,10 +34,9 @@ marinas</li>
 
     <h3>Mares</h3>
 
-    <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Mares.mp4" type="video/mp4">
-        </video>
+  <div class="contenedor-video">
+    <img src="../public/gif/Mares.gif" alt="Selva" class="videoBosque">
+</div>
 
         <!-- BOTÓN -->
         <a href="https://estudyando.com/ecosistemas-marinos-oceanos-mares-y-estuarios/" class="btn-vermas">Ver más</a>
@@ -56,9 +52,8 @@ marinas</li>
     <h3>Arrecifes de Coral</h3>
 
     <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Arrecifes de Coral.mp4" type="video/mp4">
-        </video>
+    <img src="../public/gif/arrecifres de coral.gif" alt="Selva" class="videoBosque">
+</div>
 
         <!-- BOTÓN -->
         <a href="https://www.biodiversidad.gob.mx/ecosistemas/arrecifes.html" class="btn-vermas">Ver más</a>

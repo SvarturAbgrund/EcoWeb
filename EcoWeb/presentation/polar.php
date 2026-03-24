@@ -9,10 +9,10 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
 
 <h3>Artico</h3>
 
+
 <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Artico.mp4" type="video/mp4">
-        </video>
+    <img src="../public/gif/Artico.gif" alt="Selva" class="videoBosque">
+</div>
 
         <!-- BOTÓN -->
         <a href="https://www.antarcticacruises.com/es/guia/red-trofica-y-ecosistema-del-artico" class="btn-vermas">Ver más</a>
@@ -57,9 +57,9 @@ suelos que muchas veces están congelados (permafrost). Estos ecosistemas son
 
 <h3> Tundra</h3>
 <div class="contenedor-video">
-        <video autoplay muted loop id="videoBosque">
-            <source src="../public/video/Tundra.mp4" type="video/mp4">
-        </video>
+    <img src="../public/gif/tundra.gif" alt="Selva" class="videoBosque">
+</div>
+    
 
         <!-- BOTÓN -->
         <a href="https://ecologiaverde.elperiodico.com/tundra-caracteristicas-clima-tipos-flora-y-fauna-5566.htmlÑ" class="btn-vermas">Ver más</a>
